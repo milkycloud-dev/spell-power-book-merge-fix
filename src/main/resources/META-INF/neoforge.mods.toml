@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="notebuns_spellbookfix"
+version="1.0.0"
+displayName="Spell Power Book Merge Fix"
+authors="milkycloud-dev"
+logoFile="notebuns_spellbookfix_icon.png"
+displayURL="https://github.com/milkycloud-dev/spell-power-book-merge-fix"
+description='''Lets two enchanted books with a Spell Power school enchantment (Soulfrost, Sunfire, Energize) be combined in an anvil while enchantments_require_matching_attribute is on. Works on the server alone.'''
+displayTest="IGNORE_ALL_VERSION"
+
+[[mixins]]
+    config="notebuns_spellbookfix.mixins.json"
+
+[[dependencies.notebuns_spellbookfix]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.notebuns_spellbookfix]]
+    modId="spell_power"
+    type="optional"
+    versionRange="[1.6,)"
+    ordering="AFTER"
+    side="BOTH"
